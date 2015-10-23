@@ -63,7 +63,7 @@ public class PercolationStats {
         return resMean - 1.96 * resStddev / Math.sqrt(recT.length);
     }
 
-    public double confidentceHi() {
+    public double confidenceHi() {
         return resMean + 1.96 * resStddev / Math.sqrt(recT.length);
     }
 
@@ -73,7 +73,7 @@ public class PercolationStats {
         PercolationStats percolationStats = new PercolationStats(N, T);
         StdOut.println("mean = " + percolationStats.mean());
         StdOut.println("stddev = " + percolationStats.stddev());
-        StdOut.println("95% confidence interval " + percolationStats.confidenceLo() + ", " + percolationStats.confidentceHi());
+        StdOut.println("95% confidence interval " + percolationStats.confidenceLo() + ", " + percolationStats.confidenceHi());
     }
 
 }
